@@ -11,7 +11,7 @@ This is a web application to execute Selenium tests using a web interface.
    * Email Address: osa@mailinator.com
    * Password: admin123
    * Expected Home Page Title: My account - My Store
-  ![image](https://user-images.githubusercontent.com/9147189/133933456-afd40d44-4dd5-4121-9833-7223c4f09403.png)
+  ![image](https://user-images.githubusercontent.com/9147189/133933671-da503ec0-80b1-40ee-b092-7907bc31a7fd.png)
 5. Click on "Run" button
 6. If the execution is success, you will get below screen
   ![image](https://user-images.githubusercontent.com/9147189/133933606-2851f88e-00a3-4aee-bd62-02366dbb503d.png)
