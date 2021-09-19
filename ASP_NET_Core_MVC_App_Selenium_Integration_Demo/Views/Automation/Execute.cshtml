@@ -1,0 +1,25 @@
+@model AutomationModel
+@{
+    ViewData["Title"] = "RunAutomation";
+}
+  
+<h2>Run Automation</h2>
+<form method="post">
+    <p>
+        <label asp-for="Url">Web App Url:</label>
+        <input asp-for="Url" />
+    </p>
+    <p>
+        <label asp-for="Email">Email Address:</label>
+        <input asp-for="Email" />
+    </p>
+    <p>
+        <label asp-for="Password">Password:</label>
+        <input asp-for="Password" type="password"/>
+    </p>
+    <p>
+        <label asp-for="HomePageTitle">Expected Home Page Title:</label>
+        <input asp-for="HomePageTitle" />
+    </p>
+    <p><button type="submit">Run</button></p>
+</form>
