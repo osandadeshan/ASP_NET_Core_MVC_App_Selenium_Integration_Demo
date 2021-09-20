@@ -12,7 +12,7 @@ This is a web application to execute Selenium tests using a web interface.
    * Password: admin123
    * Expected Home Page Title: My account - My Store
   ![image](https://user-images.githubusercontent.com/9147189/133970743-1019fcc0-d387-4d85-89be-6c6f4aaff662.png)
-5. Click on "Run" button
+5. Click on "Execute" button
 6. If the execution is success, you will get below screen
   ![image](https://user-images.githubusercontent.com/9147189/133970787-5076e821-ecff-4d86-896d-cc2d52e565bf.png)
   If the execution is failed, you will get below screen
