@@ -12,10 +12,11 @@ namespace ASP_NET_Core_MVC_App_Selenium_Integration_Demo.Services
         {
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArguments("headless");
-            IWebDriver driver = new ChromeDriver(chromeOptions);
+            IWebDriver driver = null;
 
             try
             {
+                driver =  new ChromeDriver(chromeOptions);
                 driver.Manage().Window.Maximize();
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMinutes(1);
                 driver.Navigate().GoToUrl(automationModel.Url);
@@ -26,14 +27,14 @@ namespace ASP_NET_Core_MVC_App_Selenium_Integration_Demo.Services
                 new WebDriverWait(driver, TimeSpan.FromMinutes(1)).Until(webDriver => ((IJavaScriptExecutor) webDriver)
                     .ExecuteScript("return document.readyState").Equals("complete"));
 
-                automationModel.Status = driver.Title.Equals(automationModel.HomePageTitle) ? "Completed" : "Failed";
+                automationModel.Status = driver.Title.Equals(automationModel.ExpectedHomePageTitle) ? "Passed" : "Failed";
             }
             catch (Exception)
             {
                 automationModel.Status = "Failed";
             }
 
-            driver.Quit();
+            driver?.Quit();
         }
     }
 }

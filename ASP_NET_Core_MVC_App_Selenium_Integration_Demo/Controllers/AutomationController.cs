@@ -22,7 +22,7 @@ namespace ASP_NET_Core_MVC_App_Selenium_Integration_Demo.Controllers
             Console.WriteLine("Web App Url: " + automationModel.Url);
             Console.WriteLine("Email Address: " + automationModel.Email);
             Console.WriteLine("Password: " + automationModel.Password);
-            Console.WriteLine("Expected Home Page Title: " + automationModel.HomePageTitle);
+            Console.WriteLine("Expected Home Page Title: " + automationModel.ExpectedHomePageTitle);
 
             AutomationService.RunAutomation(automationModel);
 

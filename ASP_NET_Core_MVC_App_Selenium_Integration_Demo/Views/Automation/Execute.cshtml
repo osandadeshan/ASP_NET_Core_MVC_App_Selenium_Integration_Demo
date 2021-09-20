@@ -1,25 +1,67 @@
 @model AutomationModel
 @{
-    ViewData["Title"] = "RunAutomation";
+    ViewData["Title"] = "Execute Automation";
 }
-  
-<h2>Run Automation</h2>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        * {
+          box-sizing: border-box;
+        }
+    
+        input[type=text],
+        input[type=password] {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+    
+        button[type=submit] {
+          background-color: #007bff;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+    
+        button[type=submit]:hover {
+          background-color: #2583ea;
+        }
+    </style>
+    <title>Execute Automation</title>
+</head>
+
+<h2>Execute Automation</h2>
+
 <form method="post">
     <p>
-        <label asp-for="Url">Web App Url:</label>
-        <input asp-for="Url" />
+        <label>Web App Url:</label>
+        <input asp-for="Url"/>
     </p>
     <p>
-        <label asp-for="Email">Email Address:</label>
-        <input asp-for="Email" />
+        <label>Email Address:</label>
+        <input asp-for="Email"/>
     </p>
     <p>
-        <label asp-for="Password">Password:</label>
+        <label>Password:</label>
         <input asp-for="Password" type="password"/>
     </p>
     <p>
-        <label asp-for="HomePageTitle">Expected Home Page Title:</label>
-        <input asp-for="HomePageTitle" />
+        <label>Expected Home Page Title:</label>
+        <input asp-for="ExpectedHomePageTitle"/>
     </p>
-    <p><button type="submit">Run</button></p>
+    <p>
+        <button type="submit">Execute</button>
+    </p>
 </form>
